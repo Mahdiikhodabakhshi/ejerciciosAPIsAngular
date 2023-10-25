@@ -17,7 +17,7 @@ constructor(private agentService:AgentsServiceService){}
   ngOnInit(): void {
     this.cargarAgents();
   }
-  cargarAgents() {
+  private cargarAgents() {
     this.agentService.getAgents().subscribe({
       next:(data :agentsAPIs) => {
       this.infoAPI = data;

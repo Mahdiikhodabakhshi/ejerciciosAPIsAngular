@@ -10,7 +10,12 @@ export class WeaponsService {
 
   constructor(private http:HttpClient) { }
 
+  URLBASE ='https://mhw-db.com/weapons';
   getWeapons():Observable<WeaponsAPIs[]>{
-    return this.http.get<WeaponsAPIs[]>('https://mhw-db.com/weapons')
+    return this.http.get<WeaponsAPIs[]>(this.URLBASE)
+  }
+
+  getWeapon(id : number):Observable<WeaponsAPIs>{
+    return this.http.get<WeaponsAPIs>(this.URLBASE + '/' + id)
   }
 }

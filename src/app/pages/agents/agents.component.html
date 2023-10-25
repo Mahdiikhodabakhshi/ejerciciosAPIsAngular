@@ -4,18 +4,20 @@
     </div>
     <div class="row">
         <div class="col-12 col-md-4 my-3" *ngFor="let agent of infoAPI.data">
-            <div class="card h-100"  >
+            <div class="card h-100" [routerLink]="'/agent/'+ agent.uuid" >
                 <div class="card-header">
-                    <h3><img src="{{agent.displayIcon" alt="" style="height: 1em;margin-bottom: 5px;"> {{agent.displayName}} </h3>
+                    <h3><img src="{{agent.displayIcon}}" alt="" style="height: 1em;margin-bottom: 5px;"> {{agent.displayName}} </h3>
                 </div>
-                <img [src]="agent.fullPortrait?agent.fullPortrait:'assets/chap.jpg'" alt="" class="card-img">
-                <div class="card-body">
-                    <p><strong>Description : </strong> {{agent.description?agent.description:'noun'}}</p>
-                    <p><strong>Role : </strong> {{agent.role?.displayName?agent.role?.displayName:'noun'}}</p>
-                    <p><strong>Role description : </strong> {{agent.role?.description?agent.role?.description:'noun'}}</p>
-                    <p><strong>Ability : </strong></p>
-                    <p *ngFor="let ab of agent.abilities"  >{{ab.description}}  </p>
-                </div>
+              <img [src]="agent.fullPortrait?agent.fullPortrait:'assets/chap.jpg'" alt="" class="card-img">
+
+<!--                <div class="card-body">-->
+<!--                    <p><strong>Description : </strong> {{agent.description?agent.description:'noun'}}</p>-->
+<!--                    <p><strong>Role : </strong> {{agent.role?.displayName?agent.role?.displayName:'noun'}}</p>-->
+<!--                    <p><strong>Role description : </strong> {{agent.role?.description?agent.role?.description:'noun'}}</p>-->
+<!--                  <p><strong>id : </strong> {{agent.uuid}}</p>-->
+<!--                    <p><strong>Ability : </strong></p>-->
+<!--                    <p *ngFor="let ab of agent.abilities"  >{{ab.description}}  </p>-->
+<!--                </div>-->
                 <div class="card-footer">
                     <small>is Available For Test : {{agent.isAvailableForTest}}</small>
                 </div>

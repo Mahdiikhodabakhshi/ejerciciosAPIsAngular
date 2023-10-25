@@ -1,9 +1,14 @@
 export interface agentsAPIs{
       status: number
-      data: Daum[]
+      data: agent[]
 }
-   
-  export interface Daum {
+
+export interface agentAPI{
+      status: number
+      data: agent
+}
+
+  export interface agent {
     uuid: string
     displayName: string
     description: string
@@ -27,7 +32,7 @@ export interface agentsAPIs{
     abilities: Ability[]
     voiceLine: any
   }
-  
+
   export interface Role {
     uuid: string
     displayName: string
@@ -35,7 +40,7 @@ export interface agentsAPIs{
     displayIcon: string
     assetPath: string
   }
-  
+
   export interface RecruitmentData {
     counterId: string
     milestoneId: string
@@ -45,11 +50,10 @@ export interface agentsAPIs{
     startDate: string
     endDate: string
   }
-  
+
   export interface Ability {
     slot: string
     displayName: string
     description: string
     displayIcon?: string
   }
-  

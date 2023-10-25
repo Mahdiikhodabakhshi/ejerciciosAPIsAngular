@@ -4,20 +4,31 @@ import { AgentsComponent } from './pages/agents/agents.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { CharacterComponent } from './pages/character/character.component';
 import { WeaponsComponent } from './pages/weapons/weapons.component';
+import {AgentComponent} from "./pages/agent/agent.component";
+import {OneCharComponent} from "./pages/one-char/one-char.component";
+import {WeaponComponent} from "./pages/weapon/weapon.component";
 
 const routes: Routes = [
-  { 
+  {
     path: '',
-    redirectTo:'/Agents',
+    redirectTo:'/agents',
     pathMatch:'full'
   },
   {
-    path: 'Agents',
+    path: 'agents',
     component: AgentsComponent
+  },
+  {
+    path: 'agent/:uuid',
+    component: AgentComponent
   },
   {
     path: 'cards',
     component: CardsComponent
+  },
+  {
+    path: 'card/:id',
+    component: OneCharComponent
   },
   {
     path: 'character',
@@ -27,9 +38,13 @@ const routes: Routes = [
     path: 'weapons',
     component: WeaponsComponent
   },
+  {
+    path: 'weapon/:id',
+    component: WeaponComponent
+  },
 {
   path:'**',
-  redirectTo:'/Agents'
+  redirectTo:'/agents'
 }
 ];
 

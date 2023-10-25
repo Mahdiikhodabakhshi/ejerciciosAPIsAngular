@@ -1,3 +1,8 @@
+
+
+
+
+
 export interface CharactersAPIs{
   id: number
   name: string

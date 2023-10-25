@@ -11,6 +11,9 @@ import { WeaponsComponent } from './pages/weapons/weapons.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { CharacterComponent } from './pages/character/character.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AgentComponent } from './pages/agent/agent.component';
+import { OneCharComponent } from './pages/one-char/one-char.component';
+import { WeaponComponent } from './pages/weapon/weapon.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     AgentsComponent,
     WeaponsComponent,
     CardsComponent,
-    CharacterComponent
+    CharacterComponent,
+    AgentComponent,
+    OneCharComponent,
+    WeaponComponent
   ],
   imports: [
     BrowserModule,

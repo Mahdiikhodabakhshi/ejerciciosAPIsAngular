@@ -4,18 +4,18 @@
   </div>
   <div class="row">
     <div class="col-12 col-md-4 my-3" *ngFor="let char of infoAPI">
-      <div class="card h-100"  >
+      <div class="card h-100" [routerLink]="'/card/'+char.id" >
         <div class="card-header">
           <h3> {{char.name}} </h3>
         </div>
         <img [src]="char.img_url" alt="" class="card-img">
-        <div class="card-body">
-          <p><strong>ID : </strong> {{char.id}}</p>
-          <p><strong>Gender : </strong> {{char.gender}}</p>
-          <p><strong>Hair : </strong> {{char.hair}}</p>
-          <p><strong>Ability : </strong></p>
-          <p *ngFor="let ab of char.abilities"  >{{ab}}  </p>
-        </div>
+<!--        <div class="card-body">-->
+<!--          <p><strong>ID : </strong> {{char.id}}</p>-->
+<!--          <p><strong>Gender : </strong> {{char.gender}}</p>-->
+<!--          <p><strong>Hair : </strong> {{char.hair}}</p>-->
+<!--          <p><strong>Ability : </strong></p>-->
+<!--          <p *ngFor="let ab of char.abilities"  >{{ab}}  </p>-->
+<!--        </div>-->
         <div class="card-footer">
           <small>Origin : {{char.origin}}</small>
         </div>
